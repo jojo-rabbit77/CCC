@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crypto Country Club</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome (CDN Example) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- FIXED VIDEO BACKGROUND -->
+  <div class="video-bg">
+    <!-- Replace 'gold_sparks.mp4' with your actual looping MP4/WebM video file -->
+    <video autoplay muted loop playsinline>
+      <source src="videos/Sparkles_new.mp4" type="video/mp4" />
+      <!-- Fallback text or formats -->
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- HERO-EXTENDED CONTAINER: Now limited to 75% width -->
+  <div class="hero-extended">
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="logo">
+        <h1>Crypto Country Club</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#rules">Rules</a></li>
+        <li><a href="#staff">Staff</a></li>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#stake">Stake CCC</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="content-section fade-left">
+      <div class="section-header" style="margin-bottom: 20px;">
+        <h2 style="font-size: 48px;">Where Luxury Meets the Digital Frontier</h2>
+        <hr />
+      </div>
+      <p style="max-width: 800px; margin: 0 auto 30px; text-align: center;">
+        Experience the exclusivity of our black-tie crypto community in one seamless, stunning environment.
+      </p>
+      <div style="text-align: center;">
+        <a href="#membership" class="btn" style="font-family: 'Cinzel', serif;">Become a Member</a>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="content-section fade-right">
+      <div class="section-header">
+        <h2>About Us</h2>
+        <hr />
+      </div>
+      <div class="section-content">
+        <!-- Placeholder image -->
+        <img src="images/about_us.jpeg" alt="About the Club" class="section-img" />
+        <p>
+          Founded in 2024, the Crypto Country Club unites connoisseurs of blockchain technology, 
+          top-tier investors, and forward-thinking innovators. Our mission: to provide an opulent 
+          environment where members can network, learn, and celebrate the evolving world of 
+          cryptocurrency in true style.
+        </p>
+      </div>
+
+      <!-- Icons Below About Us -->
+      <div class="icon-links-about">
+        <!-- X (Twitter) Icon Link -->
+        <a 
+          href="https://x.com/ccc_on_solana" 
+          target="_blank" 
+          aria-label="Crypto Country Club on X"
+          class="about-icon"
+        >
+          <i class="fab fa-twitter"></i>
+        </a>
+        <!-- Chart Link -->
+        <a 
+          href="https://dexscreener.com/solana/H8QaK9KdA1vxxVMYX2TseAbvnYbxZwRwHxediKprmoon"
+          target="_blank"
+          aria-label="DEX Screener Chart"
+          class="about-icon"
+        >
+          <i class="fas fa-chart-line"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Rules -->
+    <section id="rules" class="content-section scale-in">
+      <div class="section-header">
+        <h2>Rules</h2>
+        <hr />
+      </div>
+      <div class="section-content">
+        <img src="images/rules.jpeg" alt="Rules & Regulations" class="section-img" />
+        <ul>
+          <!-- Reordered so Sell Rule and Market Cap Requirement come first -->
+          <li>
+            <strong>Membership Minimum:</strong> A minimum of 1 million in market cap 
+            is required to join and remain in the club.
+          </li>
+          <li>
+            <strong>Sell Rule:</strong> Members must sell 10% of their holdings per each 
+            additional million in market cap. Rule violations may result in immediate dismissal 
+            from the club.
+          </li>
+          <li>
+            <strong>Confidentiality:</strong> All transactions and personal data remain strictly private.
+          </li>
+          <li>
+            <strong>Dress Code:</strong> Adherence to black-tie and business formal attire in all 
+            public club areas.
+          </li>
+          <li>
+            <strong>Professional Conduct:</strong> Respect, courtesy, and decorum are expected at all times.
+          </li>
+          <li>
+            <strong>Access Control:</strong> Vaults and private lounges require membership badges for entry.
+          </li>
+          <li>
+            <strong>Event RSVP:</strong> Attendance at exclusive events requires advance registration.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Staff / Team -->
+    <section id="staff" class="content-section fade-up">
+      <div class="section-header">
+        <h2>Our Team</h2>
+        <hr />
+      </div>
+      <div class="staff-container">
+        <!-- President -->
+        <div class="staff-member">
+          <img src="images/Docp.jpeg" alt="President Portrait" />
+          <h3>Dr. Pepe </h3>
+          <p>President</p>
+          <p style="font-size: 14px; margin-top: 10px;">
+            A visionary leader who establishes strategic objectives and ensures 
+            the club’s tradition of excellence.
+          </p>
+        </div>
+        <!-- Vice President -->
+        <div class="staff-member">
+          <img src="images/VP.jpeg" alt="VP Portrait" />
+          <h3>Vibe Shift</h3>
+          <p>Vice President</p>
+          <p style="font-size: 14px; margin-top: 10px;">
+            Oversees critical operations and collaborations to expand our crypto horizons.
+          </p>
+        </div>
+        <!-- Treasurer -->
+        <div class="staff-member">
+          <img src="images/treasurer.jpeg" alt="Treasurer Portrait" />
+          <h3>Rekt Fren</h3>
+          <p>Treasurer</p>
+          <p style="font-size: 14px; margin-top: 10px;">
+            Safeguards club finances and ensures transparent, secure asset management.
+          </p>
+        </div>
+        <!-- Golf Course Manager -->
+        <div class="staff-member">
+          <img src="images/courseM.jpeg" alt="Golf Manager Portrait" />
+          <h3>Mr. Goat</h3>
+          <p>Golf Course Manager</p>
+          <p style="font-size: 14px; margin-top: 10px;">
+            Maintains pristine fairways and coordinates all golf-related activities 
+            for members.
+          </p>
+        </div>
+        <!-- Cart Girl -->
+        <div class="staff-member">
+          <img src="images/cart_girl.jpeg" alt="Cart Girl Portrait" />
+          <h3>Ms. Yaga </h3>
+          <p>Cart Girl</p>
+          <p style="font-size: 14px; margin-top: 10px;">
+            Delivers beverages, snacks, and a friendly smile, ensuring a comfortable 
+            golfing experience.
+          </p>
+        </div>
+        <!-- 19th Hole Bartender -->
+        <div class="staff-member">
+          <img src="images/bartender.jpeg" alt="19th Hole Bartender Portrait" />
+          <h3>Anthony</h3>
+          <p>19th Hole Bartender</p>
+          <p style="font-size: 14px; margin-top: 10px;">
+            Crafts impeccable cocktails for post-game relaxation and networking.
+          </p>
+        </div>
+        <!-- Social Event Manager -->
+        <div class="staff-member">
+          <img src="images/social_M.jpeg" alt="Social Event Manager Portrait" />
+          <h3>Solona Goated</h3>
+          <p>Social Event Manager</p>
+          <p style="font-size: 14px; margin-top: 10px;">
+            Curates elite gatherings and cultural experiences for our members.
+          </p>
+        </div>
+        <!-- Marketing Director -->
+        <div class="staff-member">
+          <img src="images/marketD.jpeg" alt="Marketing Director Portrait" />
+          <h3>Mr. Destroyer</h3>
+          <p>Marketing Director</p>
+          <p style="font-size: 14px; margin-top: 10px;">
+            Showcases the club’s essence and vision to the global crypto community.
+          </p>
+        </div>
+        <!-- Member Retention -->
+        <div class="staff-member">
+          <img src="images/MemREt.jpeg" alt="Member Retention Portrait" />
+          <h3>Kazumi</h3>
+          <p>Member Retention</p>
+          <p style="font-size: 14px; margin-top: 10px;">
+            Fosters strong relationships and ensures every member feels valued.
+          </p>
+        </div>
+        <!-- Ambassador -->
+        <div class="staff-member">
+          <img src="images/geo.jpeg" alt="Ambassador Portrait" />
+          <h3>Geo</h3>
+          <p>Ambassador</p>
+          <p style="font-size: 14px; margin-top: 10px;">
+            Represents the club at global crypto events and networking initiatives.
+          </p>
+        </div>
+        <!-- Executive Chef -->
+        <div class="staff-member">
+          <img src="images/chef.jpeg" alt="Executive Chef Portrait" />
+          <h3>Arte</h3>
+          <p>Executive Chef</p>
+          <p style="font-size: 14px; margin-top: 10px;">
+            Creates culinary masterpieces that fuse fine dining with crypto-inspired flair.
+          </p>
+        </div>
+        <!-- Secretary -->
+        <div class="staff-member">
+          <img src="images/secretary.jpeg" alt="Secretary Portrait" />
+          <h3>Smolami</h3>
+          <p>Secretary</p>
+          <p style="font-size: 14px; margin-top: 10px;">
+            Organizes club records and scheduling to maintain seamless operations.
+          </p>
+        </div>
+        <!-- Executive Consul -->
+        <div class="staff-member">
+          <img src="images/council.jpeg" alt="Executive Consul Portrait" />
+          <h3>Sir EG</h3>
+          <p>Executive Consul</p>
+          <p style="font-size: 14px; margin-top: 10px;">
+            Advises on high-level decisions and mediates critical club deliberations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Membership (Single Rectangular Box) -->
+    <section id="membership" class="content-section slide-in">
+      <div class="section-header">
+        <h2>1 million market cap require</h2>
+        <hr />
+      </div>
+      <div class="section-content" style="flex-direction: column;">
+        <div 
+          style="
+            background-color: #222;
+            border: 2px solid #333;
+            border-radius: 5px;
+            padding: 40px;
+            width: 100%;
+            max-width: 700px;
+          "
+        >
+          <p style="margin-bottom: 10px;">
+            CA: H8QaK9KdA1vxxVMYX2TseAbvnYbxZwRwHxediKprmoon
+          </p>
+          <!-- Extra newline after the CA address -->
+          <br/>
+          <!-- Verification Link -->
+          <a 
+            href="https://t.me/CCCTokenGate" 
+            target="_blank" 
+            class="btn" 
+            style="background-color: #d4af37; color: #000; border-radius: 30px; text-decoration: none;"
+          >
+            Verify Eligibility
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events (Country Club Themed) -->
+    <section id="events" class="content-section rotate-in">
+      <div class="section-header">
+        <h2>Upcoming Events</h2>
+        <hr />
+      </div>
+      <div class="events-list">
+        <div class="event">
+          <h3>Summer Charity Golf Tournament</h3>
+          <p><em>Date: May 25, 2025</em></p>
+          <p>Show off your swing for a good cause. Enjoy top-tier golfing, VIP lounge access, 
+          and a post-tournament banquet.</p>
+        </div>
+        <div class="event">
+          <h3>Black-Tie Gala & Auction</h3>
+          <p><em>Date: July 10, 2025</em></p>
+          <p>An opulent evening of fine dining, crypto-themed auctions, and live music—perfect for 
+          high-level networking.</p>
+        </div>
+        <div class="event">
+          <h3>Mid-Summer Wine & Whiskey Tasting</h3>
+          <p><em>Date: August 15, 2025</em></p>
+          <p>Sample exquisite vintages and rare whiskeys from around the globe, led by our 
+          in-house sommelier.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Culinary Menu (flip-vertical) -->
+    <section id="menu" class="content-section flip-vertical">
+      <div class="section-header">
+        <h2>Culinary Crypto Country Club Journey</h2>
+        <hr />
+      </div>
+      <div class="section-content">
+        <img src="images/dining.jpeg" alt="Menu" class="section-img" />
+        <h3>A Symphony of Flavors</h3>
+        <p>
+          <strong>First Course:</strong> Oceanic Solana Elegance<br/>
+          A delicate scallop ceviche, bright with lime and chives, nestled alongside a velvet-smooth 
+          cauliflower mousse. Adorned with crisp sweet potato chips, luxurious black caviar, and 
+          a whisper of sea urchin—a maritime masterpiece that awakens the palate.
+        </p>
+        <p>
+          <strong>Second Course:</strong> Rustic Bitcoin Comfort<br/>
+          A creamy Parmantier soup, rich with smoky bacon and earthy black truffle. Accompanied by 
+          golden confit potatoes, delicate poached quail eggs, and a garnish of crispy leek for 
+          added crunch and depth of flavor.
+        </p>
+        <p>
+          <strong>Third Course:</strong> High Conviction<br/>
+          A vibrant saffron risotto celebrating the ocean's bounty. Succulent king crab mingles with 
+          tender fennel, crisp asparagus, and delicate zucchini, crowned with a generous sprinkle 
+          of aged parmesan—a celebration of seasonal ingredients.
+        </p>
+        <p>
+          <strong>Main Course:</strong> Culinary Cabal Refinement<br/>
+          A perfectly prepared sous vide fillet mignon, impossibly tender and juicy. Served with a 
+          cloud-like Jerusalem artichoke mousse, a robust wild mushroom ragout, toasted hazelnuts, 
+          and a pomegranate-enhanced gravy that adds a bright, complex finish.
+        </p>
+        <p>
+          <strong>Dessert:</strong> Innovative Pepe Indulgence<br/>
+          A reimagined tiramisu—zesty yuzu-infused mascarpone layered between espresso-soaked 
+          ladyfingers, elegantly dusted with cocoa, for a delightful modern twist.
+        </p>
+      </div>
+    </section>
+
+    <!-- "Contact Us" changed to "Stake CCC" -->
+    <section id="stake" class="content-section fade-up">
+      <div class="section-header">
+        <h2>Stake CCC</h2>
+        <hr />
+      </div>
+      <!-- Instead of a form, link to the staking site -->
+      <div class="section-content" style="flex-direction: column;">
+        <p style="max-width: 600px;">
+          Securely stake your CCC tokens and earn rewards. Access the official staking portal below.
+        </p>
+        <a 
+          href="https://m3m3.meteora.ag/farms/AGGAMmnDwN3oNefitZaZkqzkR98iAaCYZjKf73FZbDUa" 
+          target="_blank" 
+          class="btn"
+          style="margin-top: 20px;"
+        >
+          Stake CCC Now
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Crypto Country Club. All rights reserved.</p>
+    </footer>
+  </div> <!-- End hero-extended container -->
+
+  <!-- JS for Animations -->
+  <script src="scripts.js"></script>
+</body>
+</html>
