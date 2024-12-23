@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Crypto Country Club</title>
-
-  <link rel="icon" type="image/png" href="images/favicon.jpeg" />
+  
+  <!-- Favicon Placeholder -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,6 +20,9 @@
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
   />
 
   <!-- Main CSS -->
@@ -27,9 +31,10 @@
 <body>
   <!-- FIXED VIDEO BACKGROUND -->
   <div class="video-bg">
-    <!-- Replace 'gold_sparks.mp4' with your actual looping MP4/WebM video file -->
+    <!-- Replace 'Sparkles_new.mp4' with your actual looping MP4/WebM video file -->
     <video autoplay muted loop playsinline>
       <source src="videos/Sparkles_new.mp4" type="video/mp4" />
+      <source src="videos/Sparkles_new.webm" type="video/webm" />
       <!-- Fallback text or formats -->
       Your browser does not support the video tag.
     </video>
@@ -52,6 +57,10 @@
         <li><a href="#menu">Menu</a></li>
         <li><a href="#stake">Stake CCC</a></li>
       </ul>
+      <!-- Hamburger Menu Icon -->
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
     </nav>
 
     <!-- Hero Section -->
@@ -75,7 +84,7 @@
         <hr />
       </div>
       <div class="section-content">
-        <!-- Placeholder image -->
+        <!-- Customized Image -->
         <img src="images/about_us.jpeg" alt="About the Club" class="section-img" />
         <p>
           Founded in 2024, the Crypto Country Club unites connoisseurs of blockchain technology, 
@@ -157,7 +166,7 @@
         <!-- President -->
         <div class="staff-member">
           <img src="images/DocP.jpeg" alt="President Portrait" />
-          <h3>Dr. Pepe </h3>
+          <h3>Dr. Pepe</h3>
           <p>President</p>
           <p style="font-size: 14px; margin-top: 10px;">
             A visionary leader who establishes strategic objectives and ensures 
@@ -195,7 +204,7 @@
         <!-- Cart Girl -->
         <div class="staff-member">
           <img src="images/cart_girl.jpeg" alt="Cart Girl Portrait" />
-          <h3>Ms. Yaga </h3>
+          <h3>Ms. Yaga</h3>
           <p>Cart Girl</p>
           <p style="font-size: 14px; margin-top: 10px;">
             Delivers beverages, snacks, and a friendly smile, ensuring a comfortable 
@@ -280,21 +289,12 @@
     <!-- Membership (Single Rectangular Box) -->
     <section id="membership" class="content-section slide-in">
       <div class="section-header">
-        <h2>1 million market cap require</h2>
+        <h2>1 Million Market Cap Required</h2>
         <hr />
       </div>
       <div class="section-content" style="flex-direction: column;">
-        <div 
-          style="
-            background-color: #222;
-            border: 2px solid #333;
-            border-radius: 5px;
-            padding: 40px;
-            width: 100%;
-            max-width: 700px;
-          "
-        >
-          <p style="margin-bottom: 10px;">
+        <div class="membership-box">
+          <p>
             CA: H8QaK9KdA1vxxVMYX2TseAbvnYbxZwRwHxediKprmoon
           </p>
           <!-- Extra newline after the CA address -->
@@ -303,8 +303,7 @@
           <a 
             href="https://t.me/CCCTokenGate" 
             target="_blank" 
-            class="btn" 
-            style="background-color: #d4af37; color: #000; border-radius: 30px; text-decoration: none;"
+            class="btn verify-btn"
           >
             Verify Eligibility
           </a>
@@ -395,8 +394,7 @@
         <a 
           href="https://m3m3.meteora.ag/farms/AGGAMmnDwN3oNefitZaZkqzkR98iAaCYZjKf73FZbDUa" 
           target="_blank" 
-          class="btn"
-          style="margin-top: 20px;"
+          class="btn stake-btn"
         >
           Stake CCC Now
         </a>
@@ -409,7 +407,7 @@
     </footer>
   </div> <!-- End hero-extended container -->
 
-  <!-- JS for Animations -->
+  <!-- JS for Animations and Navigation -->
   <script src="scripts.js"></script>
 </body>
 </html>
