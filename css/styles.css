@@ -2,461 +2,531 @@
 /* 1) RESET & BASE STYLES            */
 /* ---------------------------------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    color: #ccc;
-    font-family: 'Lato', sans-serif;
-    scroll-behavior: smooth;
-  }
-  
-  /* ---------------------------------- */
-  /* 2) VIDEO BACKGROUND               */
-  /* ---------------------------------- */
-  .video-bg {
-    position: fixed; /* Changed from absolute to fixed */
-    top: 0; 
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Ensure it's behind all other content */
-    overflow: hidden;
-  }
-  
-  .video-bg video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the video covers the entire container without distortion */
-  }
-  
-  /* ---------------------------------- */
-  /* 3) HERO-EXTENDED CONTAINER        */
-  /* ---------------------------------- */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  color: #ccc;
+  font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #000; 
+}
+
+/* ---------------------------------- */
+/* 2) VIDEO BACKGROUND               */
+/* ---------------------------------- */
+.video-bg {
+  position: fixed; /* Fixed to viewport */
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Behind all content */
+  overflow: hidden;
+}
+
+.video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire container without distortion */
+}
+
+/* ---------------------------------- */
+/* 3) HERO-EXTENDED CONTAINER        */
+/* ---------------------------------- */
+.hero-extended {
+  width: 75%;
+  margin: 0 auto; /* Center horizontally */
+  min-height: 100vh; /* Ensure it spans full viewport height */
+  padding: 20px;
+  position: relative;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
   .hero-extended {
-    width: 75%; /* Central 75% of the screen */
-    margin: 0 auto; /* Center the container */
-    background-color: rgba(0, 0, 0); /* Semi-transparent background for readability */
-    min-height: 100vh; /* Ensure it spans full viewport height */
-    padding: 40px 20px; /* Adequate padding inside the container */
-    box-sizing: border-box;
+    width: 80%;
+    padding: 15px;
+  }
+}
+@media (max-width: 992px) {
+  .hero-extended {
+    width: 90%;
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-extended {
+    width: 95%;
+    padding: 5px;
+  }
+}
+
+/* ---------------------------------- */
+/* 4) NAVIGATION BAR                  */
+/* ---------------------------------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(17, 17, 17, 0.95); /* Slight transparency for elegance */
+  padding: 10px 20px;
+  border-bottom: 1px solid #d4af37;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Above video background */
+}
+
+nav .logo h1 {
+  font-family: 'Cinzel', serif;
+  color: #d4af37;
+  font-size: 24px;
+  margin: 0; /* Remove default margin */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  font-weight: 700;
+  font-size: 16px;
+  padding: 8px 12px;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: #d4af37;
+}
+
+/* Hamburger Menu - Hidden on Desktop */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: #d4af37;
+  cursor: pointer;
+}
+
+/* ---------------------------------- */
+/* 5) ICONS BELOW ABOUT US           */
+/* ---------------------------------- */
+.icon-links-about {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.about-icon {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #d4af37;
+  transition: color 0.3s;
+}
+
+.about-icon:hover {
+  color: #fff;
+}
+
+/* ---------------------------------- */
+/* 6) BUTTON STYLES                   */
+/* ---------------------------------- */
+.btn {
+  background-color: #d4af37;
+  color: #000;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  text-decoration: none; /* Remove underline */
+}
+
+.btn:hover {
+  background-color: #b3942f;
+}
+
+.verify-btn {
+  margin-top: 20px;
+}
+
+.stake-btn {
+  margin-top: 20px;
+}
+
+/* ---------------------------------- */
+/* 7) CONTENT SECTIONS                */
+/* ---------------------------------- */
+section {
+  padding: 40px 0; /* Reduced padding for smaller gaps */
+  width: 100%;
+}
+
+.content-section {
+  opacity: 0; 
+  transform: translateY(20px);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 30px; /* Reduced margin for smaller gaps */
+}
+
+.section-header h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 32px;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.section-header hr {
+  width: 60px;
+  border: none;
+  border-top: 2px solid #d4af37;
+  margin: 0 auto;
+}
+
+.section-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+
+.section-content p,
+.section-content ul {
+  max-width: 100%;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.content-section ul {
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+.content-section ul li {
+  margin: 10px 0;
+  background-color: #222;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: left;
+}
+
+/* ---------------------------------- */
+/* 8) STAFF SECTION                   */
+/* ---------------------------------- */
+.staff-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.staff-member {
+  background-color: #222;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  max-width: 180px;
+  transition: transform 0.3s ease;
+}
+
+.staff-member:hover {
+  transform: translateY(-5px);
+}
+
+.staff-member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; /* Perfect circle */
+  margin-bottom: 10px;
+}
+
+.staff-member h3 {
+  color: #d4af37;
+  margin-bottom: 5px;
+}
+
+.staff-bio {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* ---------------------------------- */
+/* 9) MEMBERSHIP SECTION              */
+/* ---------------------------------- */
+.membership-box {
+  background-color: #222;
+  border: 2px solid #333;
+  border-radius: 5px;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.membership-box p {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+/* ---------------------------------- */
+/* 10) EVENTS SECTION                 */
+/* ---------------------------------- */
+.events-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.event {
+  background-color: #222;
+  border-radius: 5px;
+  padding: 15px;
+  max-width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.event:hover {
+  transform: translateY(-5px);
+}
+
+.event h3 {
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+/* ---------------------------------- */
+/* 11) FOOTER                          */
+/* ---------------------------------- */
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 15px;
+  color: #ccc;
+  border-top: 1px solid #333;
+}
+
+/* ---------------------------------- */
+/* 12) SCROLL-BASED ANIMATIONS         */
+/* ---------------------------------- */
+.observed {
+  opacity: 1;
+  transform: none;
+}
+
+/* fade-left */
+.fade-left.observed {
+  animation: fadeLeft 0.8s forwards ease;
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* fade-right */
+.fade-right.observed {
+  animation: fadeRight 0.8s forwards ease;
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* scale-in */
+.scale-in.observed {
+  animation: scaleIn 0.8s forwards ease;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* fade-up */
+.fade-up.observed {
+  animation: fadeUp 0.8s forwards ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* slide-in */
+.slide-in.observed {
+  animation: slideIn 0.8s forwards ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* rotate-in */
+.rotate-in.observed {
+  animation: rotateIn 0.8s forwards ease;
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-20deg) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+/* flip-vertical */
+.flip-vertical.observed {
+  animation: flipVertical 0.8s forwards ease;
+}
+
+@keyframes flipVertical {
+  from {
+    opacity: 0;
+    transform: perspective(600px) rotateX(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(600px) rotateX(0deg);
+  }
+}
+
+/* ---------------------------------- */
+/* 13) HAMBURGER MENU                  */
+/* ---------------------------------- */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    right: 0;
+    top: 60px; /* Height of nav */
+    height: calc(100% - 60px);
+    background-color: rgba(17, 17, 17, 0.95);
+    flex-direction: column;
+    width: 200px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    padding-top: 20px;
   }
   
-  /* Responsive Adjustments */
-  @media (max-width: 1200px) {
-    .hero-extended {
-      width: 80%; /* Slightly wider on smaller screens */
-      padding: 30px 15px;
-    }
+  .nav-links.active {
+    transform: translateX(0);
   }
   
-  @media (max-width: 992px) {
-    .hero-extended {
-      width: 90%; /* Even wider on medium screens */
-      padding: 25px 10px;
-    }
+  .hamburger {
+    display: block;
   }
-  
-  @media (max-width: 768px) {
-    .hero-extended {
-      width: 95%; /* Full width on small screens */
-      padding: 20px 5px;
-    }
-  }
-  
-  /* ---------------------------------- */
-  /* 4) NAVIGATION BAR                  */
-  /* ---------------------------------- */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(17, 17, 17, 0.9); /* Slight transparency */
-    padding: 15px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Above video background */
-    border-bottom: 1px solid #d4af37;
-  }
-  
-  nav .logo h1 {
-    font-family: 'Cinzel', serif;
-    color: #d4af37;
+}
+
+/* ---------------------------------- */
+/* 14) HAMBURGER ICON ACTIVE STATE    */
+/* ---------------------------------- */
+.hamburger.active i {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* ---------------------------------- */
+/* 15) RESPONSIVE IMAGES                */
+/* ---------------------------------- */
+@media (max-width: 768px) {
+  .section-header h2 {
     font-size: 24px;
   }
   
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links li a {
-    font-weight: 700;
-    font-size: 16px;
-    padding: 10px;
-    color: #ccc;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links li a.active,
-  .nav-links li a:hover {
-    color: #d4af37;
-  }
-  
-  /* ---------------------------------- */
-  /* 5) ICONS BELOW ABOUT US           */
-  /* ---------------------------------- */
-  .icon-links-about {
-    margin-top: 30px;
-    text-align: center;
-  }
-  
-  .about-icon {
-    margin: 0 15px;
-    font-size: 28px;
-    color: #d4af37;
-    transition: color 0.3s;
-  }
-  
-  .about-icon:hover {
-    color: #fff;
-  }
-  
-  /* ---------------------------------- */
-  /* 6) BUTTON STYLES                   */
-  /* ---------------------------------- */
-  .btn {
-    background-color: #d4af37;
-    color: #000;
-    padding: 12px 25px;
-    font-size: 16px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    text-decoration: none; /* Ensure anchor-based buttons remain un-underlined */
-  }
-  .btn:hover {
-    background-color: #b3942f;
-  }
-  
-  .verify-btn {
-    margin-top: 20px;
-  }
-  
-  .stake-btn {
-    margin-top: 20px;
-  }
-  
-  /* ---------------------------------- */
-  /* 7) CONTENT SECTIONS                */
-  /* ---------------------------------- */
-  section {
-    padding: 60px 0;
-    width: 100%;
-  }
-  
-  .content-section {
-    opacity: 0; 
-    transform: translateY(20px);
-    transition: transform 0.8s ease, opacity 0.8s ease;
-  }
-  
-  .section-header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .section-header h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 36px;
-    color: #d4af37;
-    margin-bottom: 10px;
-  }
-  
-  .section-header hr {
-    width: 80px;
-    border: none;
-    border-top: 2px solid #d4af37;
-    margin: 0 auto;
-  }
-  
   .section-content {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .section-content p,
-  .section-content ul {
-    max-width: 800px;
-    line-height: 1.8;
-    font-size: 16px;
-    color: #ccc;
-  }
-  
-  .section-img {
-    max-width: 600px;
-    width: 100%;
-    border: 2px solid #333;
-    border-radius: 5px;
-  }
-  
-  /* Lists in Rules, etc. */
-  .content-section ul {
-    list-style-position: inside;
-    list-style-type: none;
-  }
-  
-  .content-section ul li {
-    margin: 15px 0;
-    background-color: #222;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: left;
-  }
-  
-  /* ---------------------------------- */
-  /* 8) STAFF SECTION                   */
-  /* ---------------------------------- */
-  .staff-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-  }
-  
-  .staff-member {
-    background-color: #222;
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-    max-width: 220px;
-    transition: transform 0.3s ease;
-  }
-  
-  .staff-member:hover {
-    transform: translateY(-5px);
-  }
-  
-  .staff-member img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%; /* Perfect circle */
-    margin-bottom: 15px;
-  }
-  
-  .staff-member h3 {
-    color: #d4af37;
-    margin-bottom: 5px;
-  }
-  
-  .staff-member p {
-    font-size: 14px;
-    color: #ccc;
-  }
-  
-  /* ---------------------------------- */
-  /* 9) MEMBERSHIP SECTION              */
-  /* ---------------------------------- */
-  .membership-box {
-    background-color: #222;
-    border: 2px solid #333;
-    border-radius: 5px;
-    padding: 40px;
-    width: 100%;
-    max-width: 700px;
-    text-align: center;
-  }
-  
-  .membership-box p {
-    margin-bottom: 10px;
-    color: #ccc;
-  }
-  
-  .membership-box a {
-    margin-top: 20px;
-  }
-  
-  /* ---------------------------------- */
-  /* 10) EVENTS SECTION                 */
-  /* ---------------------------------- */
-  .events-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-  }
-  
-  .event {
-    background-color: #222;
-    border-radius: 5px;
-    padding: 20px;
-    max-width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .event:hover {
-    transform: translateY(-5px);
-  }
-  
-  .event h3 {
-    color: #d4af37;
-    margin-bottom: 10px;
-  }
-  
-  /* ---------------------------------- */
-  /* 11) STAKE CCC SECTION               */
-  /* ---------------------------------- */
-  #stake .section-content {
     flex-direction: column;
   }
   
-  #stake .section-content p {
-    max-width: 600px;
-    margin: 0 auto 20px;
+  .section-img {
+    width: 100%;
+    max-width: 300px;
   }
   
-  #stake .stake-btn {
-    display: inline-block;
+  .staff-container {
+    flex-direction: column;
+    align-items: center;
   }
   
-  /* ---------------------------------- */
-  /* 12) FOOTER                          */
-  /* ---------------------------------- */
-  footer {
-    background-color: #111;
-    text-align: center;
-    padding: 20px;
-    color: #ccc;
-    border-top: 1px solid #333;
+  .staff-member {
+    max-width: 100%;
   }
   
-  /* ---------------------------------- */
-  /* 13) SCROLL-BASED ANIMATIONS         */
-  /* ---------------------------------- */
-  .observed {
-    opacity: 1;
-    transform: none;
+  .event {
+    max-width: 100%;
   }
-  
-  /* fade-left */
-  .fade-left.observed {
-    animation: fadeLeft 0.8s forwards ease;
-  }
-  
-  @keyframes fadeLeft {
-    from {
-      opacity: 0;
-      transform: translateX(60px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  /* fade-right */
-  .fade-right.observed {
-    animation: fadeRight 0.8s forwards ease;
-  }
-  
-  @keyframes fadeRight {
-    from {
-      opacity: 0;
-      transform: translateX(-60px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  /* scale-in */
-  .scale-in.observed {
-    animation: scaleIn 0.8s forwards ease;
-  }
-  
-  @keyframes scaleIn {
-    from {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  /* fade-up */
-  .fade-up.observed {
-    animation: fadeUp 0.8s forwards ease;
-  }
-  
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(60px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* slide-in */
-  .slide-in.observed {
-    animation: slideIn 0.8s forwards ease;
-  }
-  
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateY(100px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* rotate-in */
-  .rotate-in.observed {
-    animation: rotateIn 0.8s forwards ease;
-  }
-  
-  @keyframes rotateIn {
-    from {
-      opacity: 0;
-      transform: rotate(-20deg) scale(0.8);
-    }
-    to {
-      opacity: 1;
-      transform: rotate(0) scale(1);
-    }
-  }
-  
-  /* flip-vertical */
-  .flip-vertical.observed {
-    animation: flipVertical 0.8s forwards ease;
-  }
-  
-  @keyframes flipVertical {
-    from {
-      opacity: 0;
-      transform: perspective(600px) rotateX(90deg);
-    }
-    to {
-      opacity: 1;
-      transform: perspective(600px) rotateX(0deg);
-    }
-  }
-  
+}
+
+/* ---------------------------------- */
+/* 16) ELIMINATE TOP GAP                */
+/* ---------------------------------- */
+nav, .hero-extended {
+  margin-top: 0;
+}
+
+/* Optional: Semi-transparent overlay for better text readability */
+.hero-extended::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: -1;
+}
